@@ -1,0 +1,81 @@
+* {
+  text-align: center;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+  font-weight: bolder;
+  height: 40px;
+  width: 150px;
+  background-color: antiquewhite;
+  margin-left: 75px;
+  border-radius: 30px;
+}
+
+.ip {
+  height: 300px;
+  width: 300px;
+  background-color: aquamarine;
+  padding-top: 20px;
+  border-radius: 45px;
+  border: 2px solid rgb(38, 77, 148);
+  margin: 10% 33%;
+}
+
+#username {
+  text-align: left;
+  border-radius: 7px;
+  border: 2px solid white;
+}
+
+#pass {
+  text-align: left;
+  border-radius: 7px;
+  border: 2px solid white;
+}
+
+#ca {
+  color: aliceblue;
+  font-weight: 600;
+  background-color: #3c8af1;
+  border-radius: 20px;
+  padding: 5px 15px;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+#ca:hover {
+  color: red;
+  background-color: rgb(73, 216, 73);
+}
+
+#email {
+  text-align: left;
+  border-radius: 7px;
+  border: 2px solid white;
+}
+
+input[type="text"] {
+  color: rgb(52, 209, 52);
+}
+
+input[type="password"] {
+  color: rgb(212, 34, 34);
+}
+
+#tc:checked + label {
+  font-weight: 600;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.email {
+  font-weight: 600;
+}
+
+.pass {
+  font-weight: 600;
+}

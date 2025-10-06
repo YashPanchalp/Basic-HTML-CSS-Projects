@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="15)grid.css" </head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>Welcome to MyPet.in &#128062;</h1>
+        </div>
+        <div id="sidebar">
+            <div class="body">
+                <h3 id="Upper">Search and adopt Pet from your city</h3>
+                <select name="city" class="city">
+                    <option>Select Your City</option>
+                    <option value="ahm">Ahmedabad</option>
+                    <option value="mum">Mumbai</option>
+                    <option value="del">Delhi</option>
+                    <option value="ban">Banglore</option>
+                    <option value="chn">Chennai</option>
+                </select>
+                <label for="pet"></label>
+                <input type="text" placeholder="Pet you search for" id="pet" name="pet">
+                <button type="search" id="searchbtn">Search</button>
+            </div>
+            <h3 id="Lower">Show some Love and Adop pets!</h3>
+            <div id="link">
+                <p>For more details:</p>
+                <a href="https://awbi.gov.in/">Enqire here</a>
+            </div>
+        </div>
+        <div id="nav">
+            <span>
+                <h4>Home</h4>
+                <h4>About Us</h4>
+                <h4>Contact Us</h4>
+            </span>
+        </div>
+        <div id="main">
+            <div id="pets">
+                <div class="card">
+                    <img src="dog.jpg" alt="jerry" />
+                    <h3>Meet Jerry</h3>
+                    <p>
+                        Jerry is a charming and friendly dog with a heart of gold, and he is
+                        looking for a loving home to call his own. He is a medium-sized mixed
+                        breed with soft, fluffy fur and soulful brown eyes that will melt your
+                        heart. If you are looking for a loyal and loving companion who will
+                        bring endless joy into your life, Jerry may be the perfect pet for
+                        you.So don't hesitate to bring this wonderful
+                        pup home today!
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="cat.jpg" alt="tom" />
+                    <h3>Meet Tom</h3>
+                    <p>
+                        Tom is a handsome and affectionate cat who is looking for his forever
+                        home. He is a medium-sized domestic shorthair with sleek black and
+                        white fur and striking green eyes that will capture your heart. If you
+                        are looking for a loyal and loving companion who will provide you with
+                        endless joy and entertainment, Tom may be the perfect pet for you. So why not bring this
+                        wonderfu feline into your life today?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="ads">
+            <p>If you find stray animals near you</p>
+            <h3 id="h3inads">Inform Here</h3>
+            <p id="bracket">(for pet rescue)</p>
+            <select name="city2" class="city2">
+                <option>Select Your City</option>
+                <option value="ahm">Ahmedabad</option>
+                <option value="mum">Mumbai</option>
+                <option value="del">Delhi</option>
+                <option value="ban">Banglore</option>
+                <option value="chn">Chennai</option>
+            </select>
+            <input type="text" placeholder="Enter Animal type" name="pet2" class="pet2">
+            <p id="imt">Image of Animal</p>
+            <input type="file" placeholder="Image of Animal" name="ani" class="ani">
+            <input type="tel" onChange={handleChange} pattern="[0-9]{10}" required
+                placeholder="Enter your contact number" name="num" class="num">
+            <button id="submit">Submit</button>
+        </div>
+        <div id="footer">
+            <hr>
+            <p> Adop | Enqire | Resuce | Animal Care | Helpline </p>
+        </div>
+    </div>
+</body>
+
+</html>

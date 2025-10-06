@@ -1,0 +1,242 @@
+.container {
+  display: grid;
+  height: 600px;
+  width: 800px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  background-color: black;
+  grid-gap: 10px 10px;
+}
+
+#header {
+  grid-column: 1/13;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+span {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#sidebar {
+  grid-row: 2/11;
+  grid-column: 1/4;
+  background-color: black;
+  color: antiquewhite;
+  border: 2px solid white;
+  border-radius: 15px;
+  margin-left: 8px;
+}
+
+.body {
+  height: 265px;
+  width: 170px;
+  background-color: rgb(182, 180, 180);
+  border-radius: 15px;
+  margin-left: 6.5px;
+}
+
+#Upper {
+  display: flex;
+  height: 65px;
+  width: 160px;
+  color: black;
+  grid-row: 2/4;
+  grid-column: 1/4;
+  padding-top: 12px;
+  font-size: 19px;
+  padding-left: 10px;
+  padding-right: 5px;
+  margin-left: 4px;
+  margin-right: 2px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.city {
+  grid-row: 5 / span 7;
+  grid-column: 1 / span 4;
+  margin-top: 2px;
+  width: 155px;
+  height: 34px;
+  border-radius: 7px;
+  text-align: center;
+  margin-left: 7px;
+  background-color: black;
+  color: antiquewhite;
+}
+
+#pet {
+  margin-top: 30px;
+  height: 32px;
+  width: 151px;
+  margin-left: 7px;
+  margin-right: 7px;
+  background-color: black;
+  color: antiquewhite;
+  justify-content: center;
+  font-weight: 700;
+  text-align: center;
+}
+
+#searchbtn {
+  display: flex;
+  margin-top: 25px;
+  justify-self: center;
+  height: 25px;
+  width: 75px;
+  justify-content: center;
+  align-content: center;
+  padding-top: 3px;
+  background-color: rgb(233, 105, 105);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+#Lower {
+  margin-top: 10px;
+  font-size: 21px;
+  text-align: center;
+}
+
+#link {
+  text-align: center;
+}
+
+#nav {
+  grid-row: 2/3;
+  grid-column: 4/10;
+  background-color: rgb(233, 105, 105);
+  border-radius: 10px;
+}
+
+#main {
+  grid-row: 3/11;
+  grid-column: 4/10;
+  color: antiquewhite;
+}
+
+.card {
+  height: 300px;
+  width: 140px solid black;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 10.4px;
+  /* border: 2px solid white; */
+  border: 2mm ridge rgb(253, 107, 131);
+  box-shadow: 8px 6px 6px white;
+}
+
+#pets {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#pets img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 2px 4px 4px rgb(236, 137, 154);
+}
+
+#pets p {
+  color: rgb(171, 197, 188);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#ads {
+  grid-row: 2/11;
+  grid-column: 10/13;
+  background-color: rgb(182, 180, 180);
+  border-radius: 25px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#h3inads {
+  margin-bottom: 5px;
+}
+
+#bracket {
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+.city2 {
+  grid-row: 5 / span 7;
+  grid-column: 1 / span 4;
+  margin-top: 2px;
+  width: 155px;
+  height: 29px;
+  border-radius: 7px;
+  text-align: center;
+  margin-left: 3px;
+  background-color: black;
+  color: antiquewhite;
+}
+
+.pet2 {
+  background-color: black;
+  color: antiquewhite;
+  text-align: center;
+  font-weight: 700;
+  margin: 17px 15px 5px;
+  width: 150px;
+  height: 22px;
+  border-radius: 8px;
+}
+
+#imt {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.ani {
+  display: flex;
+  height: 20px;
+  width: 90px;
+  /* margin-left: 12px; */
+  justify-self: center;
+}
+
+.num {
+  background-color: black;
+  color: antiquewhite;
+  text-align: center;
+  margin: 20px 15px 5px;
+  width: 150px;
+  height: 24px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+#submit {
+  display: flex;
+  margin-top: 20px;
+  justify-self: center;
+  height: 25px;
+  width: 75px;
+  justify-content: center;
+  align-content: center;
+  padding-top: 3px;
+  background-color: rgb(233, 105, 105);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+#footer {
+  grid-row: 11/13;
+  grid-column: 1/13;
+  background-color: rgb(27, 20, 27);
+  margin-top: 20px;
+  text-align: center;
+  color: antiquewhite;
+}

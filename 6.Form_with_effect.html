@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Inquiry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0c0c0c;
+            /* Black background */
+            color: #fff;
+            /* White font color */
+        }
+
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #1a1a1a;
+            /* Slightly lighter black for the form */
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        h1,
+        h4 {
+            color: #f2f2f2;
+            /* Lighter white for headings */
+            margin-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select,
+        textarea {
+            width: calc(100% - 20px);
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #333;
+            /* Dark background for inputs */
+            color: #fff;
+            /* White text inside inputs */
+            border: 1px solid #555;
+            /* Subtle border for inputs */
+            border-radius: 5px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #007bff;
+            /* Highlighted border on focus */
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            /* Blue button */
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+        }
+
+        ul {
+            text-align: left;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #1e90ff;
+            /* Lighter blue for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .terms {
+            background: #2a2a2a;
+            /* Slightly lighter black for terms section */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/action">
+        <!-- Title and Logo -->
+        <div class="center">
+            <h1>College Inquiry Form from ACPC</h1>
+            <img src="images.jpg" alt="ACPC Logo" height="150px" width="150px">
+        </div>
+
+        <!-- Personal Details -->
+        <div class="form-section">
+            <h4>Enter Your Personal Details</h4>
+            <input type="text" name="f_name" placeholder="First Name" required>
+            <input type="text" name="l_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Enter Your Email" required>
+        </div>
+
+        <!-- User ID and Password -->
+        <div class="form-section">
+            <h4>User ID and Password</h4>
+            <input type="text" name="ACPC_id" placeholder="ACPC ID" required>
+            <input type="password" name="Pass" placeholder="Password" required>
+        </div>
+
+        <!-- Gender and Location -->
+        <div class="form-section">
+            <label>Select Gender:</label>
+            <input type="radio" name="Gender" id="Male" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" id="Female" value="Female">
+            <label for="Female">Female</label>
+        </div>
+        <div>
+            <b>City:</b>
+            <select name="State" id="State" required>
+                <option>Select your City</option>
+                <option value="ahm">Ahmedabad</option>
+                <option value="sur">Surat</option>
+                <option value="raj">Rajkot</option>
+                <option value="vad">Others</option>
+            </select>
+
+            <label>College:</label>
+            <select name="College" id="College" required>
+                <option>Select your College to Inquire:</option>
+                <option value="ld">LDCE Ahmedabad</option>
+                <option value="vgec">VGEC Ahmedabad</option>
+                <option value="ddu">DDU Nadiad</option>
+                <option value="gecg">GEC Gandhinagar</option>
+                <option value="smat">SMAT Surat</option>
+            </select>
+        </div>
+
+        <!-- Inquiry Details -->
+        <div class="form-section">
+            <textarea name="Extraa_info" rows="3" placeholder="What do you want to inquire about?" required></textarea>
+        </div>
+
+        <!-- Range Slider -->
+        <div class="form-section">
+            <label for="clg_no">How Many Colleges Inquired Before:</label>
+            <input type="range" name="College Count" id="clg_no" min="0" max="10" step="1" value="0">
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="terms">
+            <div>
+                <h4>*Terms and Conditions*</h4>
+            </div>
+            <ul>
+                <li>The information provided will be used solely for responding to your inquiry.</li>
+                <li>All information provided must be accurate and up-to-date.</li>
+                <li>By submitting the form, you consent to being contacted by the college.</li>
+                <li>You may opt-in to receive future updates and promotional content.</li>
+                <li>For more details, visit: <a href="https://gujacpc.admissions.nic.in/home-8/be-b-tech/"
+                        target="_blank">Official Website</a></li>
+            </ul>
+        </div>
+
+        <!-- Agree and Submit -->
+        <div class="center">
+            <label>Are you agreed to Terms and Conditions?</label>
+            <input type="checkbox" name="T&C" checked required>
+            <br>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

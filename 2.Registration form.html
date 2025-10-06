@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration_Form</title>
+</head>
+
+<body>
+    <form>
+        <h2>Registration Form</h2>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="first_name"><br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="last_name"><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+        <label for="e_id">Email:</label>
+        <input type="email" id="e_id" name="email"><br><br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password"><br><br>
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile"><br><br>
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="Canada">Canada</option>
+            <option value="Denmark">Denmark</option>
+            <option value="India" selected>India</option>
+            <option value="Japan">Japan</option>
+            <option value="Norway">Norway</option>
+        </select><br><br>
+
+        <label for="state">State:</label>
+        <select id="state" name="state">
+            <option value="">--Select State--</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Delhi">Delhi</option>
+        </select><br><br>
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="30"></textarea><br><br>
+        <label for="education">Education:</label>
+        <select id="education" name="education">
+            <option value="">--Select Education--</option>
+            <option value="High School">High School</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Bachelor's Degree">Bachelor's Degree</option>
+            <option value="Master's Degree">Master's Degree</option>
+            <option value="PhD">PhD</option>
+        </select><br><br>
+        <label>Hobbies:</label><br>
+        <input type="checkbox" id="music" value="Music">
+        <label for="music">Music</label>
+        <input type="checkbox" id="phil" value="Philosophy">
+        <label for="phil">Philosophy</label>
+        <input type="checkbox" id="sports" value="Sports">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="dance" value="Dance">
+        <label for="dance">Dance</label><br><br>
+
+        <label for="image">Upload Profile Image:</label>
+        <input type="file" id="image" name="image"><br><br>
+        <input type="reset" id="reset" value="Reset">
+        <input type="submit" id="submit" value="Submit" onclick="return false;">
+        <button type="button" onclick="showInfo()">Show Info</button><br><br>
+        <label for="output">Combined Info:</label><br>
+        <textarea id="output" rows="10" cols="50" readonly></textarea>
+    </form>
+    <script>
+        function showInfo() {
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            const dob = document.getElementById("dob").value;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value || '';
+            const email = document.getElementById("e_id").value;
+            const mobile = document.getElementById("mobile").value;
+            const country = document.getElementById("country").value;
+            const state = document.getElementById("state").value;
+            const address = document.getElementById("address").value;
+            const education = document.getElementById("education").value;
+
+            const hobbies = [];
+            ["music", "phil", "sports", "dance"].forEach(id => {
+                const checkbox = document.getElementById(id);
+                if (checkbox.checked) {
+                    hobbies.push(checkbox.value);
+                }
+            });
+            const info =
+                "Name: " + fname + " " + lname + "\n" +
+                "Date of Birth: " + dob + "\n" +
+                "Gender: " + gender + "\n" +
+                "Email: " + email + "\n" +
+                "Mobile: " + mobile + "\n" +
+                "Country: " + country + "\n" +
+                "State: " + state + "\n" +
+                "Address: " + address + "\n" +
+                "Education: " + education + "\n" +
+                "Hobbies: " + hobbies.join(", ");
+            document.getElementById("output").value = info;
+        }
+    </script>
+</body>
+
+</html>

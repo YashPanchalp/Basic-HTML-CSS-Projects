@@ -1,0 +1,29 @@
+.container {
+  height: 400px;
+  width: 400px;
+  border: 5px dotted rgb(100, 176, 206);
+  background-color: rgb(20, 20, 20);
+  border-radius: 30px;
+  padding-top: 25px;
+  margin: 10% 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container div {
+  height: 100px;
+  width: 100px;
+  border: 2px solid rgb(90, 198, 212);
+  background-color: rgb(255, 252, 252);
+  border-radius: 15px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.container div:hover {
+  background-color: aqua;
+  box-shadow: 8px 8px 8px rgb(233, 225, 225);
+  transition: box-shadow 0.5s linear 0s;
+}
